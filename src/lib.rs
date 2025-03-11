@@ -37,6 +37,12 @@ impl Urandom {
         Ok(u32::from_le_bytes(buffer))
     }
 
+    pub fn read_f32(mut self) -> io::Result<f32> {
+        let mut buffer = [0u8; 4];
+        self.read_buffer(&mut buffer)?;
+        Ok(f32::from_le_bytes(buffer))
+    }
+
     pub fn read_u64(mut self) -> io::Result<u64> {
         let mut buffer = [0u8; 8];
         self.read_buffer(&mut buffer)?;
