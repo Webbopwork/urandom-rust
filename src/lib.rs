@@ -19,43 +19,43 @@ impl Urandom {
         Ok(buffer)
     }
 
-    pub fn read_u8(mut self) -> io::Result<u8> {
+    pub fn read_u8(&mut self) -> io::Result<u8> {
         let mut buffer = [0u8; 1];
         self.read_buffer(&mut buffer)?;
         Ok(u8::from_le_bytes(buffer))
     }
 
-    pub fn read_u16(mut self) -> io::Result<u16> {
+    pub fn read_u16(&mut self) -> io::Result<u16> {
         let mut buffer = [0u8; 2];
         self.read_buffer(&mut buffer)?;
         Ok(u16::from_le_bytes(buffer))
     }
 
-    pub fn read_u32(mut self) -> io::Result<u32> {
+    pub fn read_u32(&mut self) -> io::Result<u32> {
         let mut buffer = [0u8; 4];
         self.read_buffer(&mut buffer)?;
         Ok(u32::from_le_bytes(buffer))
     }
 
-    pub fn read_f32(mut self) -> io::Result<f32> {
+    pub fn read_f32(&mut self) -> io::Result<f32> {
         let mut buffer = [0u8; 4];
         self.read_buffer(&mut buffer)?;
         Ok(f32::from_le_bytes(buffer))
     }
 
-    pub fn read_u64(mut self) -> io::Result<u64> {
+    pub fn read_u64(&mut self) -> io::Result<u64> {
         let mut buffer = [0u8; 8];
         self.read_buffer(&mut buffer)?;
         Ok(u64::from_le_bytes(buffer))
     }
 
-    pub fn read_usize(mut self) -> io::Result<usize> {
+    pub fn read_usize(&mut self) -> io::Result<usize> {
         let mut buffer = [0u8; 8];
         self.read_buffer(&mut buffer)?;
         Ok(usize::from_le_bytes(buffer))
     }
 
-    pub fn read_u128(mut self) -> io::Result<u128> {
+    pub fn read_u128(&mut self) -> io::Result<u128> {
         let mut buffer = [0u8; 16];
         self.read_buffer(&mut buffer)?;
         Ok(u128::from_le_bytes(buffer))
