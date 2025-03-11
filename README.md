@@ -23,3 +23,9 @@ fn main() {
     
 }
 ```
+
+Add to your project using this in your Cargo.toml:
+```toml
+[dependencies]
+urandom = { git = "https://github.com/Webbopwork/urandom-rust.git" }
+```
