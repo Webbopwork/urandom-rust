@@ -1,0 +1,9 @@
+[package]
+name = "urandom"
+version = "0.1.0"
+edition = "2021"
+authors = [
+    "Webbop <webbop@pm.me>",
+]
+
+[dependencies]
